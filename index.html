@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- 기본 메타 정보 -->
+    <meta name="description" content="동영상 스트리밍 서비스">
+    <meta name="keywords" content="동영상, 스트리밍, 비디오">
+    <meta name="author" content="스트리밍 서비스">
+
+    <!-- PWA 관련 메타 태그 -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Open Graph 태그 -->
+    <meta property="og:title" content="동영상 스트리밍">
+    <meta property="og:description" content="고품질 동영상 스트리밍 서비스">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/img/og-image.jpg">
+
+    <!-- 파비콘 및 앱 아이콘 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+    <!-- 매니페스트 및 스타일시트 -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- 보안 헤더 추가 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self'">
+
+    <title>동영상 스트리밍</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>동영상 스트리밍</h1>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/categories">카테고리</a></li>
+                    <li><a href="/my-list">내 리스트</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="featured-content">
+            <h2 class="visually-hidden">추천 콘텐츠</h2>
+            <!-- 동영상 플레이어 및 콘텐츠가 들어갈 영역 -->
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 동영상 스트리밍. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/terms">이용약관</a></li>
+                    <li><a href="/privacy">개인정보처리방침</a></li>
+                    <li><a href="/contact">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- JavaScript 파일 -->
+    <script src="/assets/js/scripts.js" defer></script>
+
+    <!-- PWA 서비스 워커 등록 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>

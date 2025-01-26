@@ -1,0 +1,96 @@
+/* 기본 변수 설정 */
+:root {
+  --primary-color: #333;
+  --text-color: #ffffff;
+  --background-color: #f5f5f5;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --max-width: 1200px;
+}
+
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+/* 헤더 스타일 */
+.main-header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding: 2rem;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 푸터 스타일 */
+.main-footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  height: var(--footer-height);
+}
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* 추가된 스타일 */
+.additional-style {
+  /* 추가된 스타일 코드를 여기에 추가할 수 있습니다. */
+} 

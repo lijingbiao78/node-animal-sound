@@ -1,0 +1,89 @@
+/* 반응형 스타일 정의 */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* 모바일 스타일 (600px 이하) */
+@media screen and (max-width: 600px) {
+  :root {
+    --header-height: 50px;
+    --footer-height: 50px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .nav-container {
+    padding: 0 10px;
+  }
+
+  .nav-menu ul {
+    gap: 1rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* 태블릿 스타일 (601px - 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+/* 데스크톱 스타일 (1025px 이상) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+
+  .nav-container:hover .nav-menu a {
+    transition: color 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    color: #007bff;
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --primary-color: #2d2d2d;
+    --text-color: #ffffff;
+  }
+
+  body {
+    color: var(--text-color);
+  }
+} 
